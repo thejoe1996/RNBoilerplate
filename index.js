@@ -3,7 +3,12 @@
  */
 
 import {AppRegistry} from 'react-native';
-import App from './src/App';
-import {name as appName} from './app.json';
+import Config from "react-native-config";
 
-AppRegistry.registerComponent(appName, () => App);
+import App from '@/src/App';
+import {name as appName} from '@/app.json';
+import StorybookUIRoot from '@/.ondevice/Storybook';
+
+AppRegistry.registerComponent(appName, () =>
+  Number(Config.ENABLE_STORYBOOK) ? StorybookUIRoot : App
+);
