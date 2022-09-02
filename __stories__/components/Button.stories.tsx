@@ -8,13 +8,21 @@ import {Button} from '@/src/components/Button';
 export default {
   title: 'components/Button',
   component: Button,
+  argTypes: { onPress: { action: "onPress" } },
 } as ComponentMeta<typeof Button>;
 
-export const Basic: ComponentStory<typeof Button> = args => (
-  <Button {...args} />
-);
+const Template: ComponentStory<typeof Button> = args => <Button {...args} />
 
-Basic.args = {
+export const Purple: ComponentStory<typeof Button> = Template.bind({})
+
+Purple.args = {
   text: 'Hello World',
   color: 'purple',
+}
+;
+export const Red: ComponentStory<typeof Button> = Template.bind({})
+
+Red.args = {
+  text: 'Hello World',
+  color: 'red',
 };
