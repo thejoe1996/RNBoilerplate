@@ -6,10 +6,8 @@ import { Button } from '../components/Button';
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Text>
-        Home
-      </Text>
       <Button text="Login" onPress={NavigationActions.login} />
+      <Button text="Schools" onPress={NavigationActions.schools} />
     </View>
   )
 }
