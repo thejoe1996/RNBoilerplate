@@ -1,3 +1,23 @@
+diff --git a/node_modules/react-native-router-flux/index.d.ts b/node_modules/react-native-router-flux/index.d.ts
+index 0cf2d03..6652663 100644
+--- a/node_modules/react-native-router-flux/index.d.ts
++++ b/node_modules/react-native-router-flux/index.d.ts
+@@ -22,6 +22,7 @@ interface RouterProps extends React.Props<Router> {
+   getSceneStyle?: Function;
+   uriPrefix?: string;
+   onDeepLink?: Function;
++  children: any;
+ }
+ interface RouterStatic extends React.ComponentClass<RouterProps> {}
+ 
+@@ -149,6 +150,7 @@ interface StackProps extends React.Props<Stack> {
+   type?: string;
+   navTransparent?: boolean;
+   renderer?: any;
++  children: any;
+ }
+ interface StackStatic extends React.ComponentClass<StackProps> {}
+ 
 diff --git a/node_modules/react-native-router-flux/src/NavBar.js b/node_modules/react-native-router-flux/src/NavBar.js
 index bb154e0..b4827b5 100644
 --- a/node_modules/react-native-router-flux/src/NavBar.js
