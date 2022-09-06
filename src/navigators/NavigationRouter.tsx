@@ -8,7 +8,7 @@ const NavigationRouter = () => {
     <Router>
       <Stack key="root">
         <Scene key="home" title="Home" component={Home} initial />
-        <Scene key="login" title="Login" component={Login} />
+        <Scene key="login" title="Login" component={Login} back/>
       </Stack>
     </Router>
   )
