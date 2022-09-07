@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
-import {reducer as schoolReducer} from './Schools/reducers';
+import schoolReducer from './slices/Schools';
 
-export const reducer = combineReducers({
+export default combineReducers({
   school: schoolReducer,
 });

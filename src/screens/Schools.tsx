@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Text, View } from 'react-native';
 import { connect } from 'react-redux';
-import { GET_ALL_SCHOOLS } from '../redux/Schools/actions';
+import { getAllSchoolsRequest } from '../redux/slices/Schools';
 
 const mapStateToProps = (state, props) => {
   const { data, fetching, error } = state.school;
@@ -12,7 +12,7 @@ const mapStateToProps = (state, props) => {
 const mapDispatchToProps = (dispatch, props) => ({
   getAllSchools: () => {
     dispatch({
-      type: GET_ALL_SCHOOLS,
+      type: getAllSchoolsRequest.type,
       payload: {
         data: ['School 1', 'School 2'],
         fetching: false,
@@ -23,8 +23,6 @@ const mapDispatchToProps = (dispatch, props) => ({
 });
 
 const SchoolsView = ({ data, fetching, error, getAllSchools }) => {
-  console.log({ data, fetching, error });
-
   useEffect(() => {
     getAllSchools();
   }, [getAllSchools]);

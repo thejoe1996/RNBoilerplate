@@ -1,3 +1,0 @@
-export const GET_ALL_SCHOOLS = 'schools/GET_ALL_SCHOOLS';
-export const GET_ALL_SCHOOLS_SUCCESS = 'schools/GET_ALL_SCHOOLS_SUCCESS';
-export const GET_ALL_SCHOOLS_FAILURE = 'schools/GET_ALL_SCHOOLS_FAILURE';
