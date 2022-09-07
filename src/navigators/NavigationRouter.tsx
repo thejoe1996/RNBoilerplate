@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {Scene, Router, Stack} from 'react-native-router-flux';
 import Home from '@/src/screens/Home';
 import Login from '@/src/screens/Login';

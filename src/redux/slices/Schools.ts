@@ -1,6 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
 import type {PayloadAction, Slice} from '@reduxjs/toolkit';
-import {takeEvery, put} from 'redux-saga/effects';
 
 // Define a type for the slice state
 type SchoolsState = {

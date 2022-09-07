@@ -8,11 +8,14 @@ const styles = StyleSheet.create({
     fontSize: 24,
     padding: 12,
   },
+  headerIconContainer: {
+    alignItems: 'center',
+  },
 });
 
 export const backButton = () => (
   <TouchableOpacity onPress={() => NavigationActions.pop()}>
-    <View style={{alignItems: 'center'}}>
+    <View style={styles.headerIconContainer}>
       <Icon name="arrow-left" style={styles.headerButton} />
     </View>
   </TouchableOpacity>
