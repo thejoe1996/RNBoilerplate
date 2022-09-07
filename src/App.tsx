@@ -6,10 +6,8 @@ import {
   useColorScheme,
 } from 'react-native';
 
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
-import { Provider } from 'react-redux';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {Provider} from 'react-redux';
 import NavigationRouter from './navigators/NavigationRouter';
 import store from './redux/store';
 
@@ -32,8 +30,8 @@ const App = () => {
 
 const styles = StyleSheet.create({
   appContainer: {
-    flex: 1
-  }
+    flex: 1,
+  },
 });
 
 export default App;

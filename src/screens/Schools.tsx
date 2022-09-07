@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
-import { Text, View } from 'react-native';
-import { connect } from 'react-redux';
-import { getAllSchoolsRequest } from '../redux/slices/Schools';
+import React, {useEffect} from 'react';
+import {Text, View} from 'react-native';
+import {connect} from 'react-redux';
+import {getAllSchoolsRequest} from '../redux/slices/Schools';
 
 const mapStateToProps = (state, props) => {
-  const { data, fetching, error } = state.school;
+  const {data, fetching, error} = state.school;
 
-  return { data, fetching, error };
+  return {data, fetching, error};
 };
 
 const mapDispatchToProps = (dispatch, props) => ({
@@ -22,7 +22,7 @@ const mapDispatchToProps = (dispatch, props) => ({
   },
 });
 
-const SchoolsView = ({ data, fetching, error, getAllSchools }) => {
+const SchoolsView = ({data, fetching, error, getAllSchools}) => {
   useEffect(() => {
     getAllSchools();
   }, [getAllSchools]);
@@ -36,9 +36,6 @@ const SchoolsView = ({ data, fetching, error, getAllSchools }) => {
   );
 };
 
-const Schools = connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(SchoolsView);
+const Schools = connect(mapStateToProps, mapDispatchToProps)(SchoolsView);
 
 export default Schools;

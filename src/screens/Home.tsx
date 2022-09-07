@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View } from "react-native"
-import { Actions as NavigationActions } from 'react-native-router-flux'
-import { Button } from '../components/Button';
+import {StyleSheet, Text, View} from 'react-native';
+import {Actions as NavigationActions} from 'react-native-router-flux';
+import {Button} from '../components/Button';
 
 const Home = () => {
   return (
@@ -9,8 +9,8 @@ const Home = () => {
       <Button text="Login" onPress={NavigationActions.login} />
       <Button text="Schools" onPress={NavigationActions.schools} />
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-})
+});
 
-export default Home
+export default Home;

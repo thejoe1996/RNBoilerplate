@@ -1,15 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from "react-native"
+import {StyleSheet, Text, View} from 'react-native';
 
 const Login = () => {
   return (
     <View style={styles.container}>
-      <Text>
-        Login
-      </Text>
+      <Text>Login</Text>
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -17,6 +15,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-})
+});
 
-export default Login
+export default Login;
