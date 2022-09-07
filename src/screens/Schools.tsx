@@ -10,16 +10,19 @@ const Schools = () => {
   });
   const dispatch = useAppDispatch();
   useEffect(() => {
-    dispatch(
-      getAllSchoolsRequest({
-        data: ['Test'],
-      }),
-    );
+    if (dispatch) {
+      dispatch(
+        getAllSchoolsRequest({
+          data: [],
+        }),
+      );
+    }
   }, [dispatch]);
 
   return (
     <View>
-      <Text>{data}</Text>
+      {!!data &&
+        data.map(school => <Text key={school.school_id}>{school.name}</Text>)}
       <Text>{fetching}</Text>
       <Text>{error}</Text>
     </View>

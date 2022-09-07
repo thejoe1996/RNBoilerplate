@@ -2,8 +2,13 @@ import {createSlice} from '@reduxjs/toolkit';
 import type {PayloadAction, Slice} from '@reduxjs/toolkit';
 
 // Define a type for the slice state
+export interface School {
+  school_id: number;
+  name: string;
+}
+
 export type SchoolsState = {
-  data: any;
+  data: School[];
   fetching: boolean;
   error: null | boolean;
 };

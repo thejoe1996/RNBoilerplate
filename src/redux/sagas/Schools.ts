@@ -1,14 +1,26 @@
-import {put} from 'redux-saga/effects';
+import axios, {AxiosResponse} from 'axios';
+import {call, put} from 'redux-saga/effects';
+import {PayloadAction} from '@reduxjs/toolkit';
+import {API_TOKEN, SCHOOLS_API_URL} from '@/src/config/url';
 import {getAllSchoolsFailure, getAllSchoolsSuccess} from '../slices/Schools';
 import type {SchoolsActionType} from '../slices/Schools';
-import {PayloadAction} from '@reduxjs/toolkit';
 
 export function* getAllUserInfo({payload}: PayloadAction<SchoolsActionType>) {
   try {
-    // This should be an API call
-    // this is temporary to test saga
-    yield put(getAllSchoolsSuccess(payload));
+    const response: AxiosResponse = yield call(() =>
+      axios.get(SCHOOLS_API_URL, {
+        params: {
+          limit: 5,
+        },
+        headers: {
+          Authorization: `Token token=${API_TOKEN}`,
+        },
+      }),
+    );
+    yield put(
+      getAllSchoolsSuccess({data: response.data?.objects || payload.data}),
+    );
   } catch (err) {
-    yield put(getAllSchoolsFailure(err));
+    yield put(getAllSchoolsFailure({data: payload.data}));
   }
 }
