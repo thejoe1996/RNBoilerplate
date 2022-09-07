@@ -44,18 +44,4 @@ export const schoolsSlice: Slice<SchoolsState> = createSlice({
 
 export const { getAllSchoolsRequest, getAllSchoolsSuccess, getAllSchoolsFailure } = schoolsSlice.actions
 
-export function* handler() {
-  yield takeEvery(getAllSchoolsRequest.type, getAllUserInfo);
-}
-
-function* getAllUserInfo(action: SchoolsActionType) {
-  try {
-    // This should be an API call 
-    // this is temporary to test saga
-    yield put(getAllSchoolsSuccess);
-  } catch (err) {
-    // Handle error
-  }
-}
-
 export default schoolsSlice.reducer
