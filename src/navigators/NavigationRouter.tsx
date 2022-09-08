@@ -6,9 +6,9 @@ import Login from '@/src/screens/Login';
 const NavigationRouter = () => {
   return (
     <Router>
-      <Stack key="root" >
-        <Scene key="home" title="Home" component={Home} initial  />
-        <Scene key="login" title="Login" component={Login} back />
+      <Stack key="root">
+        <Scene key="home" title="Home" component={Home} initial />
+        <Scene key="login" title="Login" component={Login} back/>
       </Stack>
     </Router>
   )
